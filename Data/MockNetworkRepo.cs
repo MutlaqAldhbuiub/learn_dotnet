@@ -18,10 +18,10 @@ public class MockNetworkRepo : INetworkRepo
     public Network? GetNetworkById(int id)
     {
         // Check if the id is valid, if not return 404
-        if (id > GetAllNetworks().Count())
-        {
-            return null;
-        }
+        // if (id > GetAllNetworks().Count())
+        // {
+        //     return null;
+        // }
 
         return GetAllNetworks().FirstOrDefault(n => n.Id == id);
     }

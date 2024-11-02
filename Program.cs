@@ -1,10 +1,14 @@
 using learn_dotnet.Data;
+using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add database context
+builder.Services.AddDbContext<NetworkContext>(options =>
+    options.UseMySql(builder.Configuration.GetConnectionString("NetworkConnection"), ServerVersion.AutoDetect(builder.Configuration.GetConnectionString("NetworkConnection"))));
+
 // Add services to the container.
 builder.Services.AddControllers();
-
 builder.Services.AddScoped<INetworkRepo, MockNetworkRepo>();
 
 
