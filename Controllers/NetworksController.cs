@@ -10,7 +10,14 @@ namespace learn_dotnet.Controllers;
 [Route("api/[controller]")]
 public class NetworksController : ControllerBase
 {
-    private readonly INetworkRepo _repository = new MockNetworkRepo();
+
+    private readonly INetworkRepo _repository;
+
+    public NetworksController(INetworkRepo repository)
+    {
+        _repository = repository;
+    }
+
 
     // Get all networks
     [HttpGet]

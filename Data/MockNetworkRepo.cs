@@ -15,8 +15,14 @@ public class MockNetworkRepo : INetworkRepo
         return networks;
     }
 
-    public Network GetNetworkById(int id)
+    public Network? GetNetworkById(int id)
     {
-        return new Network { Id = 0, Name = "Test Network", Ip = "192.168.1.1", Capacity = 100 };
+        // Check if the id is valid, if not return 404
+        if (id > GetAllNetworks().Count())
+        {
+            return null;
+        }
+
+        return GetAllNetworks().FirstOrDefault(n => n.Id == id);
     }
 }
