@@ -143,3 +143,4 @@
 /home/mutlaq/Projects/learn_dotnet/bin/Debug/net8.0/MySqlConnector.dll
 /home/mutlaq/Projects/learn_dotnet/bin/Debug/net8.0/Pomelo.EntityFrameworkCore.MySql.dll
 /home/mutlaq/Projects/learn_dotnet/bin/Debug/net8.0/System.IdentityModel.Tokens.Jwt.dll
+/home/mutlaq/Projects/learn_dotnet/bin/Debug/net8.0/Microsoft.Bcl.TimeProvider.dll

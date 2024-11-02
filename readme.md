@@ -12,3 +12,7 @@
 2. Run `dotnet build` to build the project
 3. Run `dotnet run` to run the project
 
+#### default admin credentials
+
+- username: admin
+- password: password123
