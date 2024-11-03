@@ -1,5 +1,6 @@
 using learn_dotnet.Data;
 using learn_dotnet.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace learn_dotnet.Controllers;
@@ -21,6 +22,7 @@ public class NetworksController : ControllerBase
 
     // Get all networks
     [HttpGet]
+    [Authorize]
     public ActionResult<IEnumerable<Network>> GetAllNetworks()
     {
         var networks = _repository.GetAllNetworks();
